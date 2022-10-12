@@ -1,0 +1,491 @@
+lskat (4:21.08.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.0).
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Aug 2021 16:38:34 +0900
+
+lskat (4:21.04.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.0).
+  * Fix up libkf5kdegames-dev version.
+  * Borrow minimal upstream signing key from k3b.
+  * Drop Kubuntu from maintainer name.
+  * Removed Eshat Cakar, George Kiagiadakis, Maximiliano Curia, Modestas
+    Vainius from the uploaders, thanks for your work on the package!
+  * Added myself to the uploaders.
+  * Update list of installed files.
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 28 Apr 2021 12:49:07 +0900
+
+lskat (4:20.12.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Remove obsolete field Name from debian/upstream/metadata (already present in
+    machine-readable debian/copyright).
+  * Update the build dependencies according to the upstream build system:
+    - bump cmake to 3.5
+    - bump Qt packages to 5.10.0
+  * Bump Standards-Version to 4.5.1, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 07 Jan 2021 23:24:29 +0100
+
+lskat (4:20.04.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Drop the Debian man page: it ought to be provided and maintained by
+    upstream, in case there is any interest for it.
+  * Bump the debhelper compatibility to 13:
+    - switch the debhelper-compat build dependency to 13
+    - stop passing --fail-missing to dh_missing, as it is the default now
+  * Add Rules-Requires-Root: no.
+  * Bump Standards-Version to 4.5.0, no changes required.
+  * Generate the kde-l10n breaks only for arch:all packages.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 03 Aug 2020 08:02:23 +0200
+
+lskat (4:19.12.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update watch file to the new release-service location.
+  * Move the AppStream metadata from lskat-data to lskat, as it must be
+    together with the executable it represents
+    - add proper breaks/replaces
+  * Bump Standards-Version to 4.4.1, no changes required.
+  * Switch from the debhelper build dependency to debhelper-compat
+    - remove debian/compat
+  * Append "data files" to the short description of lskat-data.
+  * Switch cmake parameter BIN_INSTALL_DIR to KDE_INSTALL_BINDIR, as the former
+    is deprecated.
+  * Make sure to use the kf5 dh addon also when overriding dh_auto_configure.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 05 Jan 2020 14:40:37 +0100
+
+lskat (4:19.08.0-2) unstable; urgency=medium
+
+  * New revision
+  * Depend on the newer ecm
+  * Move qdebug files
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 21 Sep 2019 07:43:45 -0700
+
+lskat (4:19.08.0-1.1) unstable; urgency=medium
+
+  * Team upload.
+  * Useless non-change upload to fix self-inflicted bug in Debian's infra.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 07 Sep 2019 20:36:02 -0300
+
+lskat (4:19.08.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Replace Lisandro with myself from uploaders.
+  * Refresh copyright file.
+  * Bump compat to 12.
+  * Bump standards to 4.4.0; no changes needed.
+  * Move away from dhmk, update rules.
+  * Update manpage path.
+  * Hook l10npkgs_firstversion_ok into gencontrol.
+  * Refresh upstream signing key using export-minimal.
+  * Add hardening +bindnow to rules.
+  * Improve extended description.
+  * Split data into own package to fix lintian:
+    arch-dep-package-has-big-usr-share.
+  * Add breaks/replace for split.
+  * Release to unstable.
+
+ -- Scarlett Moore <sgmoore@kde.org>  Sat, 24 Aug 2019 13:50:49 -0700
+
+lskat (4:18.04.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * New upstream release (18.04.1).
+  * Update Vcs links to salsa.
+  * Use secure copyright format uri.
+  * Bump Standards-Version to 4.1.4 (No changes needed).
+  * Bump debhelper build-dep and compat to 11.
+  * Update build-deps and deps with the info from cmake
+  * Update copyright file for new upstream.
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 29 May 2018 02:31:23 +0200
+
+lskat (4:17.08.3-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * New upstream release (17.08.1)
+  * Bump Standards-Version to 4.1.0.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Add breaks/replaces against the kde-l10n packages
+  * Update uploaders list as requested by MIA team (Closes: #879411)
+
+  [ Jonathan Riddell ]
+  * update signing key
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
+  * Bump Standards-Version to 4.1.1, no changes required.
+  * Simplify watch file, and switch it to https.
+  * Remove the unused libkf5notifyconfig-dev build dependency.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 18 Nov 2017 18:35:27 +0100
+
+lskat (4:17.08.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 05 Sep 2017 14:05:32 +0000
+
+lskat (4:17.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 23 Aug 2017 10:34:25 +0000
+
+lskat (4:16.08.0-1) unstable; urgency=medium
+
+  * New upstream release (16.08.0)
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 19 Oct 2016 00:01:39 +0200
+
+lskat (4:16.04.0-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+
+  [ Maximiliano Curia ]
+  * Remove menu file and friends
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 21 May 2016 23:49:10 +0200
+
+lskat (4:15.12.0-1) experimental; urgency=medium
+
+  * New upstream release (15.12.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 01 Feb 2016 10:24:30 +0100
+
+lskat (4:15.08.0-1) unstable; urgency=medium
+
+  * New upstream release (15.08.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 19 Sep 2015 19:11:06 +0200
+
+lskat (4:14.12.2-1) experimental; urgency=medium
+
+  * New upstream release (14.12.2).
+  * Bump Standards-Version to 3.9.6, no changes needed.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 23 Feb 2015 09:14:51 +0100
+
+lskat (4:14.12.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove unstable from watch file, uscan fails with
+    remote site does not even have current version
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Feb 2015 09:03:50 -0800
+
+lskat (4:14.12.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove kdelibs5-dev depend version as there was not a new release.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 15 Dec 2014 16:32:41 +0100
+
+lskat (4:14.11.97-0ubuntu1) vivid; urgency=medium
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 01 Dec 2014 18:03:51 +0100
+
+lskat (4:4.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 23 Aug 2014 02:36:26 +0200
+
+lskat (4:4.14.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 10 Oct 2014 06:27:49 -0700
+
+lskat (4:4.14.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Mon, 22 Sep 2014 17:49:05 +0200
+
+lskat (4:4.14.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 20 Aug 2014 13:34:11 +0200
+
+lskat (4:4.13.97-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release RC
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Fri, 01 Aug 2014 17:24:22 +0200
+
+lskat (4:4.13.95-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Wed, 30 Jul 2014 18:49:29 +0200
+
+lskat (4:4.13.90-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Thu, 24 Jul 2014 23:38:06 +0200
+
+lskat (4:4.13.2-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+  * Merge with Debian, no changes
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 17 Jun 2014 10:42:02 +0100
+
+lskat (4:4.13.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 23 May 2014 10:45:29 +0200
+
+lskat (4:4.12.4-1) unstable; urgency=medium
+
+  * Do not disable an empty test set.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * New upstream release.
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 28 Apr 2014 12:25:38 +0200
+
+lskat (4:4.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 07 Nov 2013 14:28:55 +0100
+
+lskat (4:4.11.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 07 Oct 2013 15:30:17 +0200
+
+lskat (4:4.10.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Jul 2013 16:02:27 +0200
+
+lskat (4:4.10.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update vcs fields.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 14 Jun 2013 10:54:54 +0200
+
+lskat (4:4.10.2-1) experimental; urgency=low
+
+  * First release of kdegames after being split by upstream.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Apr 2013 10:53:13 +0200
+
+lskat (4:4.13.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream KDE Software Compilation release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 10 Apr 2014 22:23:27 +0100
+
+lskat (4:4.12.97-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Wed, 02 Apr 2014 11:51:04 +0200
+
+lskat (4:4.12.95-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sun, 23 Mar 2014 12:50:16 +0100
+
+lskat (4:4.12.90-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 19 Mar 2014 11:56:32 +0000
+
+lskat (4:4.12.3-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 04 Mar 2014 21:11:47 +0100
+
+lskat (4:4.12.2-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 05 Feb 2014 00:22:33 +0000
+
+lskat (4:4.12.1-0ubuntu1) trusty; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 16 Jan 2014 08:36:18 +0000
+
+lskat (4:4.12.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Dec 2013 17:37:40 +0000
+
+lskat (4:4.11.97-0ubuntu1) trusty; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 29 Nov 2013 13:35:30 +0000
+
+lskat (4:4.11.95-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 25 Nov 2013 18:33:06 +0100
+
+lskat (4:4.11.80-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sat, 23 Nov 2013 17:55:21 +0100
+
+lskat (4:4.11.2-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 30 Sep 2013 14:49:24 +0100
+
+lskat (4:4.11.1-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 06 Sep 2013 22:36:39 +0100
+
+lskat (4:4.11.0-0ubuntu1) saucy; urgency=low
+
+  [ Howard Chan ]
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 14 Aug 2013 00:33:17 +0100
+
+lskat (4:4.10.97-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC 2 release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Jul 2013 19:59:17 +0100
+
+lskat (4:4.10.95-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 19 Jul 2013 12:33:25 +0000
+
+lskat (4:4.10.90-0ubuntu1) saucy; urgency=low
+
+  * New upstream bet release
+
+ -- Michał Zając <quintasan@kubuntu.org>  Fri, 28 Jun 2013 18:27:56 +0100
+
+lskat (4:4.10.80-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 21 Jun 2013 01:44:35 +0100
+
+lskat (4:4.10.4-0ubuntu1) saucy-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 07 Jun 2013 00:47:56 +0100
+
+lskat (4:4.10.3-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 23 May 2013 11:04:58 +0000
+
+lskat (4:4.10.2-1) experimental; urgency=low
+
+  * First release of kdegames after being split by upstream.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Apr 2013 10:53:13 +0200
+
+lskat (4:4.10.2-0ubuntu1) raring; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 31 Mar 2013 14:59:20 +0200
+
+lskat (4:4.10.1-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 05 Mar 2013 16:44:13 +0000
+
+lskat (4:4.10.0-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 06 Feb 2013 12:09:08 +0000
+
+lskat (4:4.9.98-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 18 Jan 2013 16:00:39 +0000
+
+lskat (4:4.9.97-0ubuntu1) raring; urgency=low
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 03 Jan 2013 22:45:10 +0100
+
+lskat (4:4.9.95-0ubuntu1) raring; urgency=low
+
+  * Install to /usr/games
+  * Version dependency on kdegames-data
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Dec 2012 23:42:43 +0000
+
+lskat (4:4.9.90-0ubuntu2) raring; urgency=low
+
+  * Add missing GFDL 1.2 information to debian/copyright
+  * Add lintian override for version-substvar-for-external-package, this is
+    needed in this case and OK because lskat and libkdegames are released
+    together
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 11 Dec 2012 22:49:31 -0500
+
+lskat (4:4.9.90-0ubuntu1) raring-proposed; urgency=low
+
+  * Initial release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Dec 2012 18:12:08 +0000
